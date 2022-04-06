@@ -1,27 +1,18 @@
 {
   "name": "when-exit",
+  "repository": "github:fabiospampinato/when-exit",
   "description": "Execute a function right before the process is about to exit.",
   "version": "1.0.0",
+  "type": "module",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf dist",
-    "compile": "tsc --skipLibCheck && tstei",
-    "compile:watch": "tsc --skipLibCheck --watch",
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
     "test": "node test/index.js",
     "prepublishOnly": "npm run clean && npm run compile"
-  },
-  "bugs": {
-    "url": "https://github.com/fabiospampinato/when-exit/issues"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Fabio Spampinato",
-    "email": "spampinabio@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fabiospampinato/when-exit.git"
   },
   "keywords": [
     "exit",
@@ -33,9 +24,8 @@
     "signal"
   ],
   "devDependencies": {
-    "@types/node": "^17.0.16",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.5.5",
-    "typescript-transform-export-interop": "^1.0.4"
+    "@types/node": "^17.0.23",
+    "tsex": "^1.0.4",
+    "typescript": "^4.6.3"
   }
 }

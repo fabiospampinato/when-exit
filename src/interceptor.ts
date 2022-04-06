@@ -2,7 +2,7 @@
 /* IMPORT */
 
 import Signals from './signals';
-import {Callback, Disposer} from './types';
+import type {Callback, Disposer} from './types';
 
 /* MAIN */
 

@@ -1,7 +1,7 @@
 
 /* IMPORT */
 
-const {default: onExit} = require ( '../dist' );
+import onExit from '../dist/index.js';
 
 /* MAIN */
 

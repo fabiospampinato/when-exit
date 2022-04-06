@@ -2,6 +2,7 @@
 /* MAIN */
 
 const IS_LINUX = ( process.platform === 'linux' );
+
 const IS_WINDOWS = ( process.platform === 'win32' );
 
 /* EXPORT */
