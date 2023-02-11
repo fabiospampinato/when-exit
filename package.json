@@ -12,7 +12,7 @@
     "compile": "tsex compile",
     "compile:watch": "tsex compile --watch",
     "test": "node test/index.js",
-    "prepublishOnly": "npm run clean && npm run compile"
+    "prepublishOnly": "tsex prepare"
   },
   "keywords": [
     "exit",
@@ -24,8 +24,8 @@
     "signal"
   ],
   "devDependencies": {
-    "@types/node": "^17.0.23",
-    "tsex": "^1.0.4",
-    "typescript": "^4.6.3"
+    "@types/node": "^18.13.0",
+    "tsex": "^2.1.0",
+    "typescript": "^4.9.5"
   }
 }

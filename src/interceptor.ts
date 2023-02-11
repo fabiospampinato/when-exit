@@ -14,7 +14,7 @@ class Interceptor {
   private exited = false;
   private hooked = false;
 
-  /* LIFECYCLE API */
+  /* API */
 
   exit = ( signal?: string ): void => {
 
