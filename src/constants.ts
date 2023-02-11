@@ -1,4 +1,8 @@
 
+/* IMPORT */
+
+import process from 'node:process';
+
 /* MAIN */
 
 const IS_LINUX = ( process.platform === 'linux' );
