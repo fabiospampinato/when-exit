@@ -3,7 +3,7 @@
 
 import process from 'node:process';
 import Signals from './signals';
-import type {Callback, Disposer} from './types';
+import type {Callback, Disposer} from '../types';
 
 /* MAIN */
 

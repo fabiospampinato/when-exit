@@ -1,6 +1,6 @@
 # When Exit
 
-Execute a function right before the process is about to exit.
+Execute a function right before the process, or the browser's tab, is about to exit.
 
 ## Install
 

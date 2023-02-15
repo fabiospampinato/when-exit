@@ -1,7 +1,7 @@
 
 /* IMPORT */
 
-import onExit from '../dist/index.js';
+import onExit from '../dist/node/index.js';
 
 /* MAIN */
 
