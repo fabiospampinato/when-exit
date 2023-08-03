@@ -13,7 +13,14 @@ class Interceptor {
 
   private callbacks = new Set<Callback> ();
   private exited = false;
-  private hooked = false;
+
+  /* CONSTRUCTOR */
+
+  constructor () {
+
+    this.hook ();
+
+  }
 
   /* API */
 
@@ -39,10 +46,6 @@ class Interceptor {
 
   hook = (): void => {
 
-    if ( this.hooked ) return;
-
-    this.hooked = true;
-
     process.once ( 'exit', () => this.exit () );
 
     for ( const signal of Signals ) {
@@ -54,8 +57,6 @@ class Interceptor {
   };
 
   register = ( callback: Callback ): Disposer => {
-
-    this.hook ();
 
     this.callbacks.add ( callback );
 

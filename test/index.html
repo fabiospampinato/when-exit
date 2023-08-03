@@ -7,7 +7,7 @@
     <script type="module">
       //TODO: This module should really be tested better than this
       // import whenExit from '../dist/browser/index.js';
-      const whenExit = (()=>{var t=class{constructor(){this.callbacks=new Set;this.exit=()=>{for(let e of this.callbacks)e()};this.register=e=>(this.callbacks.add(e),()=>{this.callbacks.delete(e)});window.addEventListener("beforeunload",this.exit)}},a=new t;var s=a.register,i=s;return i;})();
+      const whenExit = (()=>{var t=class{constructor(){this.callbacks=new Set;this.exit=()=>{for(let e of this.callbacks)e()};this.hook=()=>{window.addEventListener("beforeunload",this.exit)};this.register=e=>(this.callbacks.add(e),()=>{this.callbacks.delete(e)});this.hook()}},o=new t;var s=o.register;return s;})();
 
       const unload_1 = localStorage.getItem ( 'unload_1' );
       const unload_2 = localStorage.getItem ( 'unload_2' );

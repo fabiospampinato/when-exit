@@ -15,7 +15,7 @@ class Interceptor {
 
   constructor () {
 
-    window.addEventListener ( 'beforeunload', this.exit );
+    this.hook ();
 
   }
 
@@ -28,6 +28,12 @@ class Interceptor {
       callback ();
 
     }
+
+  };
+
+  hook = (): void => {
+
+    window.addEventListener ( 'beforeunload', this.exit );
 
   };
 
