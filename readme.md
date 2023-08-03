@@ -1,4 +1,4 @@
-# When Exit
+# WhenExit
 
 Execute a function right before the process, or the browser's tab, is about to exit.
 
