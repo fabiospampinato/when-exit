@@ -2,6 +2,7 @@
 /* IMPORT */
 
 import process from 'node:process';
+import {IS_WINDOWS} from './constants';
 import Signals from './signals';
 import type {Callback, Disposer} from '../types';
 
@@ -38,7 +39,15 @@ class Interceptor {
 
     if ( signal ) {
 
-      process.kill ( process.pid, signal );
+      if ( IS_WINDOWS && ( signal !== 'SIGINT' && signal !== 'SIGTERM' && signal !== 'SIGKILL' ) ) { // Windows doesn't support POSIX signals, but Node emulates these 3 signals for us
+
+        process.kill ( process.pid, 'SIGTERM' );
+
+      } else {
+
+        process.kill ( process.pid, signal );
+
+      }
 
     }
 
