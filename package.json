@@ -2,7 +2,7 @@
   "name": "when-exit",
   "repository": "github:fabiospampinato/when-exit",
   "description": "Execute a function right before the process, or the browser's tab, is about to exit.",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "type": "module",
   "main": "dist/node/index.js",
   "types": "./dist/node/index.d.ts",
