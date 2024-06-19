@@ -59,7 +59,9 @@ class Interceptor {
 
     for ( const signal of Signals ) {
 
-      process.once ( signal, () => this.exit ( signal ) );
+      try {
+        process.once ( signal, () => this.exit ( signal ) );
+      } catch {}
 
     }
 
