@@ -5,19 +5,19 @@ import {IS_LINUX, IS_WINDOWS} from './constants';
 
 /* MAIN */
 
-//URL: https://github.com/tapjs/signal-exit/blob/03dd77a96caa309c6a02c59274d58c812a2dce45/signals.js
+//URL: https://github.com/tapjs/signal-exit/blob/458776d9cf8be89712aa1f7b45bb2163ce15ef4a/src/signals.ts
 
-const Signals = ['SIGABRT', 'SIGALRM', 'SIGHUP', 'SIGINT', 'SIGTERM'];
+const Signals = ['SIGHUP', 'SIGINT', 'SIGTERM'];
 
 if ( !IS_WINDOWS ) {
 
-  Signals.push ( 'SIGVTALRM', 'SIGXCPU', 'SIGXFSZ', 'SIGUSR2', 'SIGTRAP', 'SIGSYS', 'SIGQUIT', 'SIGIOT' );
+  Signals.push ( 'SIGALRM', 'SIGABRT', 'SIGVTALRM', 'SIGXCPU', 'SIGXFSZ', 'SIGUSR2', 'SIGTRAP', 'SIGSYS', 'SIGQUIT', 'SIGIOT' );
 
 }
 
 if ( IS_LINUX ) {
 
-  Signals.push ( 'SIGIO', 'SIGPOLL', 'SIGPWR', 'SIGSTKFLT', 'SIGUNUSED' );
+  Signals.push ( 'SIGIO', 'SIGPOLL', 'SIGPWR', 'SIGSTKFLT' );
 
 }
 
