@@ -36,6 +36,10 @@ disposer ();
 process.exit (); // Callback 1 and 2 are called before exiting
 ```
 
+## Signals
+
+`SIGTRAP`, `SIGABRT`, `SIGIOT`, `SIGBUS`, `SIGFPE`, `SIGILL`, `SIGSEGV` and `SIGSYS` are not intercepted because native fatal errors cannot reliably run JavaScript cleanup. Cleanup callbacks do not run for direct termination by these signals, including externally sent signals.
+
 ## License
 
 MIT © Fabio Spampinato
