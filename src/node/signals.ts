@@ -11,7 +11,7 @@ const Signals = ['SIGHUP', 'SIGINT', 'SIGTERM'];
 
 if ( !IS_WINDOWS ) {
 
-  Signals.push ( 'SIGALRM', 'SIGABRT', 'SIGVTALRM', 'SIGXCPU', 'SIGXFSZ', 'SIGUSR2', 'SIGTRAP', 'SIGSYS', 'SIGQUIT', 'SIGIOT' );
+  Signals.push ( 'SIGALRM', 'SIGVTALRM', 'SIGXCPU', 'SIGXFSZ', 'SIGUSR2', 'SIGQUIT' );
 
 }
 

@@ -1,9 +1,17 @@
 
 /* IMPORT */
 
+import assert from 'node:assert/strict';
+
 import onExit from '../dist/node/index.js';
 
 /* MAIN */
+
+for ( const signal of ['SIGTRAP', 'SIGABRT', 'SIGIOT', 'SIGBUS', 'SIGFPE', 'SIGILL', 'SIGSEGV', 'SIGSYS'] ) {
+
+  assert.equal ( process.listenerCount ( signal ), 0, signal );
+
+}
 
 //TODO: This module should really be tested better than this
 
